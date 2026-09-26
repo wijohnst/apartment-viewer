@@ -11,7 +11,7 @@ const options = (labels) => Object.entries(labels)
 // Every editable listing field, grouped the way the edit form lays them out.
 // `key` may be a dotted path into nested objects (e.g. contact.phone).
 // Types: text (default) | textarea | lines | select | number | url | tel |
-// email | range ("3", "1-3", "2+") | money-range ("2400", "1,335-1,995", "2614+").
+// email | boolean | range ("3", "1-3", "2+") | money-range ("2400", "1,335-1,995", "2614+").
 export const FIELD_GROUPS = [
   {
     title: 'Listing',
@@ -75,6 +75,7 @@ export const FIELD_GROUPS = [
   {
     title: 'Contact',
     fields: [
+      { key: 'contacted', label: 'Contacted', type: 'boolean', wide: true, hint: "Has the lister been contacted?" },
       { key: 'contact.company', label: 'Company / manager' },
       { key: 'contact.phone', label: 'Phone', type: 'tel' },
       { key: 'contact.email', label: 'Email', type: 'email', wide: true },
@@ -166,6 +167,7 @@ export function toDraft(listing) {
     const value = getPath(listing, field.key)
     if (field.type === 'lines') draft[field.key] = (value || []).join('\n')
     else if (field.type === 'range' || field.type === 'money-range') draft[field.key] = rangeToInput(value)
+    else if (field.type === 'boolean') draft[field.key] = value ? 'true' : 'false'
     else draft[field.key] = value == null ? '' : String(value)
   })
   return draft
@@ -187,6 +189,7 @@ function fromDraft(field, raw) {
     return Number.isFinite(n) ? n : null
   }
   if (field.type === 'select') return text
+  if (field.type === 'boolean') return text === 'true'
   return text.trim()
 }
 
@@ -280,6 +283,7 @@ export function blankListing(id) {
     confirmedAmenities: '',
     toVerify: '',
     contact: { company: null, phone: null, email: null, notes: '' },
+    contacted: false,
     score: null,
     researchNotes: '',
     seedStatus: 'new',

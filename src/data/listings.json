@@ -46,8 +46,9 @@
       "email": null,
       "notes": ""
     },
+    "contacted": true,
     "score": 3,
-    "researchNotes": "",
+    "researchNotes": "- 45 min. appointment",
     "seedStatus": "accepted",
     "notes": "",
     "appointment": {
@@ -101,6 +102,7 @@
       "email": null,
       "notes": "- Contacted 2026/09/26"
     },
+    "contacted": true,
     "score": null,
     "researchNotes": "",
     "seedStatus": "accepted",
@@ -157,6 +159,7 @@
       "email": null,
       "notes": "- Contacted 2026/09/26"
     },
+    "contacted": true,
     "score": 3.5,
     "researchNotes": "- Good backyard\n- Detached garage",
     "seedStatus": "accepted",
@@ -212,6 +215,7 @@
       "email": null,
       "notes": "- Contacted 2026/009/2026"
     },
+    "contacted": true,
     "score": 3,
     "researchNotes": "",
     "seedStatus": "accepted",
@@ -268,12 +272,13 @@
       "email": null,
       "notes": "- Emailed 2026/09/26"
     },
+    "contacted": true,
     "score": 4,
     "researchNotes": "",
     "seedStatus": "accepted",
     "notes": "",
     "appointment": {
-      "dateTime": null
+      "dateTime": "2026-10-02T09:30"
     }
   },
   {
@@ -324,9 +329,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": 4,
     "researchNotes": "One of our favorites. Mid-century modern.",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -379,9 +385,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "West Salem — same longer-commute flag as other West Salem entries.",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -434,12 +441,13 @@
       "email": null,
       "notes": ""
     },
+    "contacted": true,
     "score": null,
     "researchNotes": "4bd exceeds the 2-3bd target range, but Will & Julia saved it, so flagging rather than dropping.",
     "seedStatus": "accepted",
     "notes": "- contacted 09/26 via Zillow\n",
     "appointment": {
-      "dateTime": null
+      "dateTime": "2026-10-02T12:00"
     }
   },
   {
@@ -489,6 +497,7 @@
       "email": null,
       "notes": "- Contacted 2026/09/26"
     },
+    "contacted": true,
     "score": null,
     "researchNotes": "",
     "seedStatus": "accepted",
@@ -526,7 +535,7 @@
       "https://photos.zillowstatic.com/fp/24fcb8ca690b8442583800b89de82ec6-cc_ft_576.jpg"
     ],
     "pets": {
-      "cats": "unknown",
+      "cats": "not-allowed",
       "dogs": "unknown",
       "notes": "Unconfirmed"
     },
@@ -545,9 +554,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "4bd, same over-bedroom-count note as 295 Myers St S.",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -600,9 +610,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
-    "researchNotes": "",
-    "seedStatus": "new",
+    "researchNotes": "- 11 minute commute",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -655,6 +666,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "",
     "seedStatus": "accepted",
@@ -710,9 +722,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -765,6 +778,7 @@
       "email": null,
       "notes": "- Contacted 2026/09/26"
     },
+    "contacted": true,
     "score": null,
     "researchNotes": "Confirms the existing Magnolia36 entry from Julia's list — strongest amenity match of that batch. See also julias-list-magnolia36.",
     "seedStatus": "accepted",
@@ -821,9 +835,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "New sibling property to Magnolia36/98.",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -877,9 +892,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Confirms the existing Fairway entry from Julia's list. See also julias-list-the-fairway.",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -930,6 +946,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Confirms the existing Grove entry from Julia's list. See also julias-list-the-grove.",
     "seedStatus": "rejected",
@@ -986,6 +1003,7 @@
       "email": null,
       "notes": "Pull into the driveway off of Linwood St. and take a sharp Left all the way to the end of the road to the left is the office. Suite 119\n\nPark Infront of the office.  If this spot in not available, you can park at the entrance of the property in guest parking."
     },
+    "contacted": true,
     "score": null,
     "researchNotes": "Confirms this is a real, active listing — moved out of Unverified. West Salem, same commute flag as other West Salem entries.\n\nLarge closets",
     "seedStatus": "accepted",
@@ -1042,9 +1060,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": true,
     "score": null,
     "researchNotes": "Confirms The Meridian is genuinely leasing residential units — moved out of Unverified. Near downtown, ~2 mi from Julia's office.",
-    "seedStatus": "new",
+    "seedStatus": "accepted",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1073,31 +1092,33 @@
     "source": "Zillow",
     "sourceUrl": "https://www.zillow.com/apartments/salem-or/sunnyview-townhomes/Chc9Rv/",
     "images": [
+      "https://photos.zillowstatic.com/fp/b17378eea0048680f0cba7914fb44cfa-cc_ft_1536.webp",
       "https://images1.apartments.com/i2/0oRaHONiDBdTu8LYkQ9ZWx-WhFYX5bV9bUFJaY-bpvw/116/sunnyview-townhomes-salem-or-sunnyview-townhomes-three-bedroom-kitche.jpg"
     ],
     "pets": {
-      "cats": "unknown",
-      "dogs": "unknown",
-      "notes": "Unconfirmed"
+      "cats": "allowed",
+      "dogs": "allowed",
+      "notes": ""
     },
     "amenities": {
-      "laundry": "unknown",
+      "laundry": "hookups",
       "ac": "unknown",
       "dishwasher": "unknown",
       "garage": "unknown",
-      "outdoorSpace": "unknown"
+      "outdoorSpace": "yes"
     },
-    "confirmedAmenities": "",
-    "toVerify": "Pet policy, AC, dishwasher",
+    "confirmedAmenities": "Dog run",
+    "toVerify": "",
     "contact": {
       "company": null,
       "phone": null,
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Confirms real, active listing — moved out of Unverified. NE Salem, same commute flag as other NE Salem entries.",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1151,6 +1172,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": 1,
     "researchNotes": "Rejected — too shabby.",
     "seedStatus": "rejected",
@@ -1207,9 +1229,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": 3,
     "researchNotes": "Location is nice for Julia's job but that's it. Small bathrooms.",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1258,9 +1281,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "This is West Salem (schools: Harritt Elem/Walker MS/West Salem HS), not just \"Salem\" — same longer-commute flag as other West Salem entries.",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1309,6 +1333,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Off market — verified directly on the live listing page (zero 3bd units available). Do not pursue unless the property manager confirms new availability.",
     "seedStatus": "rejected",
@@ -1360,6 +1385,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Off market — same as 3324 Argyle Dr S, zero 3bd units available. Do not pursue.",
     "seedStatus": "rejected",
@@ -1416,9 +1442,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Verified live listing. Real hotpads.com link, checked out with an even better pet policy than first recorded (correction on 9/22).",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1472,6 +1499,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Verified live listing. Real hotpads.com link (correction on 9/22).",
     "seedStatus": "new",
@@ -1528,6 +1556,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "South Salem. See also the confirming Zillow unit listing (fairway-waln-dr-se-1691-unit221).",
     "seedStatus": "new",
@@ -1584,6 +1613,7 @@
       "email": null,
       "notes": "Contacted 2026/09/26"
     },
+    "contacted": true,
     "score": null,
     "researchNotes": "",
     "seedStatus": "rejected",
@@ -1640,9 +1670,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1695,9 +1726,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Strongest amenity match of this batch. See also the confirming Zillow unit listing (magnolia36-maci-elle-ct-se-3494).",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1746,9 +1778,10 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "No live listing page found; only in aggregated Redfin rental data. Confirm directly.",
-    "seedStatus": "new",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1797,6 +1830,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "No live listing page found; only in aggregated data.\nLayout (original): 2bd + bonus room",
     "seedStatus": "new",
@@ -1848,6 +1882,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "West Salem, across the river — also flagged for longer commute.",
     "seedStatus": "new",
@@ -1904,6 +1939,7 @@
       "email": null,
       "notes": ""
     },
+    "contacted": false,
     "score": null,
     "researchNotes": "Otherwise a strong match, but the no-cats policy is a hard dealbreaker given the family's 2 cats.",
     "seedStatus": "rejected",

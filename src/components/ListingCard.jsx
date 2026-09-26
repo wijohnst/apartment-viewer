@@ -33,6 +33,7 @@ export default function ListingCard({ listing, status, edited, onOpen }) {
         <div className="badge-row">
           <span className={`badge status-${status}`}>{STATUS_LABELS[status] || status}</span>
           <span className={`badge pets-${fit}`}>{PET_FIT_LABELS[fit]}</span>
+          {listing.contacted && <span className="badge contacted">Contacted</span>}
           <span className="badge">{typeLabel}</span>
           {categoryLabel !== typeLabel && <span className="badge">{categoryLabel}</span>}
           {listing.score != null && <span className="badge">Score {listing.score}/5</span>}

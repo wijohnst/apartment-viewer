@@ -27,6 +27,7 @@
         "confirmedAmenities",
         "toVerify",
         "contact",
+        "contacted",
         "score",
         "researchNotes",
         "seedStatus",
@@ -98,6 +99,10 @@
             "email": { "type": ["string", "null"] },
             "notes": { "type": "string" }
           }
+        },
+        "contacted": {
+          "type": "boolean",
+          "description": "Whether we've reached out to the landlord/manager yet."
         },
         "score": { "type": ["number", "null"], "minimum": 0, "maximum": 5 },
         "researchNotes": { "type": "string" },

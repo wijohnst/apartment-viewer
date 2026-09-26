@@ -130,6 +130,7 @@ function searchableFields({ listing, entry }) {
     [contact.phone, 1],
     [contact.email, 1],
     [contact.notes, 1],
+    [listing.contacted && 'contacted', 1],
     [entry.notes, 1],
   ]
     .filter(([value]) => value)

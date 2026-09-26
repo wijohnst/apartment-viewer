@@ -149,6 +149,20 @@ export function isLegacyListing(record) {
   return !record || typeof record.pets !== 'object' || record.pets === null
 }
 
+// True when a record is missing fields added since it was written, so the
+// next export will change the file's format.
+export function needsUpgrade(record) {
+  return isLegacyListing(record) || typeof record.contacted !== 'boolean'
+}
+
+// Records written before `contacted` existed: infer it from notes like
+// "- Contacted 2026/09/26" or "Emailed 9/26".
+const CONTACT_WORDS = /\b(contacted|emailed|called|texted|messaged|reached out)\b/i
+
+export function inferContacted(r) {
+  return CONTACT_WORDS.test(`${r.contact?.notes || ''}\n${r.notes || ''}`)
+}
+
 // v1 record -> v2 record. v2 records pass through with defaults filled in.
 export function migrateListing(record) {
   if (!isLegacyListing(record)) return normalizeListing(record)
@@ -192,6 +206,7 @@ export function normalizeListing(r) {
     toVerify: r.toVerify || '',
     researchNotes: r.researchNotes || '',
     contact: { company: null, phone: null, email: null, notes: '', ...(r.contact || {}) },
+    contacted: typeof r.contacted === 'boolean' ? r.contacted : inferContacted(r),
     score: r.score ?? null,
     seedStatus: r.seedStatus || 'new',
     notes: r.notes || '',

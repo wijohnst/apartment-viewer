@@ -17,21 +17,41 @@ function FormField({ field, value, onChange, autoFocus, error }) {
   const id = `field-${field.key.replace(/\./g, '-')}`
   const common = {
     id,
-    value,
     autoFocus,
     'aria-invalid': error ? 'true' : undefined,
-    onChange: (e) => onChange(e.target.value),
   }
 
   let control
   switch (field.type) {
+    case 'boolean':
+      control = (
+        <input
+          {...common}
+          type="checkbox"
+          checked={value === 'true' || value === true}
+          onChange={(e) => onChange(e.target.checked ? 'true' : 'false')}
+        />
+      )
+      break
     case 'textarea':
     case 'lines':
-      control = <textarea {...common} rows={3} placeholder={field.placeholder} />
+      control = (
+        <textarea
+          {...common}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          rows={3}
+          placeholder={field.placeholder}
+        />
+      )
       break
     case 'select':
       control = (
-        <select {...common}>
+        <select
+          {...common}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+        >
           {field.options.map(([optionValue, optionLabel]) => (
             <option key={optionValue} value={optionValue}>
               {optionLabel}
@@ -45,6 +65,8 @@ function FormField({ field, value, onChange, autoFocus, error }) {
         <input
           {...common}
           type="number"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
           inputMode="decimal"
           min={field.min}
           max={field.max}
@@ -54,16 +76,42 @@ function FormField({ field, value, onChange, autoFocus, error }) {
       break
     case 'range':
     case 'money-range':
-      control = <input {...common} type="text" inputMode="decimal" placeholder={field.placeholder} />
+      control = (
+        <input
+          {...common}
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          inputMode="decimal"
+          placeholder={field.placeholder}
+        />
+      )
       break
     default:
-      control = <input {...common} type={field.type || 'text'} placeholder={field.placeholder} />
+      control = (
+        <input
+          {...common}
+          type={field.type || 'text'}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={field.placeholder}
+        />
+      )
   }
 
   return (
-    <div className={`form-field ${field.wide ? 'wide' : ''} ${error ? 'has-error' : ''}`}>
-      <label htmlFor={id}>{field.label}</label>
-      {control}
+    <div className={`form-field ${field.wide ? 'wide' : ''} ${field.type === 'boolean' ? 'checkbox-field' : ''} ${error ? 'has-error' : ''}`}>
+      {field.type === 'boolean' ? (
+        <div className="checkbox-wrapper">
+          {control}
+          <label htmlFor={id}>{field.label}</label>
+        </div>
+      ) : (
+        <>
+          <label htmlFor={id}>{field.label}</label>
+          {control}
+        </>
+      )}
       {error ? <small className="field-error">{error}</small> : field.hint && <small>{field.hint}</small>}
     </div>
   )

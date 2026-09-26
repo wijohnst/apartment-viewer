@@ -69,6 +69,16 @@ export const FILTERS = [
       return v === 'ok' ? laundry === 'in-unit' || laundry === 'hookups' : laundry === v
     },
   },
+  {
+    key: 'contacted',
+    label: 'Contacted',
+    options: [
+      ['any', 'Any'],
+      ['yes', 'Yes'],
+      ['no', 'Not yet'],
+    ],
+    test: (l, v) => Boolean(l.contacted) === (v === 'yes'),
+  },
   ...['ac', 'dishwasher'].map((key) => ({
     key,
     label: key === 'ac' ? 'A/C' : 'Dishwasher',

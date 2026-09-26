@@ -117,6 +117,7 @@ const RECORD_KEYS = [
   'confirmedAmenities',
   'toVerify',
   'contact',
+  'contacted',
   'score',
   'researchNotes',
   'seedStatus',
