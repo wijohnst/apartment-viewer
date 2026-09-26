@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://salem-apartment-viewer.local/listings.schema.json",
+  "title": "Salem Apartment Viewer listings",
+  "description": "src/data/listings.json — the seed data for the app. Enums here are the single source of truth; the app builds its dropdowns from them.",
+  "type": "array",
+  "items": { "$ref": "#/$defs/listing" },
+  "$defs": {
+    "listing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "address",
+        "category",
+        "propertyType",
+        "rent",
+        "beds",
+        "baths",
+        "sqft",
+        "source",
+        "sourceUrl",
+        "images",
+        "pets",
+        "amenities",
+        "confirmedAmenities",
+        "toVerify",
+        "contact",
+        "score",
+        "researchNotes",
+        "seedStatus",
+        "notes",
+        "appointment"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$",
+          "description": "Stable slug; also the localStorage key."
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "address": { "type": "string" },
+        "category": { "$ref": "#/$defs/category" },
+        "propertyType": { "$ref": "#/$defs/propertyType" },
+        "rent": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["min", "max", "note"],
+          "description": "Monthly rent in USD. min === max for a single price; max null means \"min and up\".",
+          "properties": {
+            "min": { "type": ["integer", "null"], "minimum": 0 },
+            "max": { "type": ["integer", "null"], "minimum": 0 },
+            "note": { "type": "string", "description": "Wording that doesn't fit the numbers, e.g. \"total\" or \"incl. move-in special\"." }
+          }
+        },
+        "beds": { "$ref": "#/$defs/range" },
+        "baths": { "$ref": "#/$defs/range" },
+        "sqft": { "type": ["integer", "null"], "minimum": 0 },
+        "source": { "type": "string" },
+        "sourceUrl": { "type": "string", "pattern": "^(https?://.+)?$" },
+        "images": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^https?://.+" },
+          "description": "Image URLs; the first is the preview."
+        },
+        "pets": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["cats", "dogs", "notes"],
+          "properties": {
+            "cats": { "$ref": "#/$defs/petRule" },
+            "dogs": { "$ref": "#/$defs/petRule" },
+            "notes": { "type": "string" }
+          }
+        },
+        "amenities": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["laundry", "ac", "dishwasher", "garage", "outdoorSpace"],
+          "properties": {
+            "laundry": { "$ref": "#/$defs/laundry" },
+            "ac": { "$ref": "#/$defs/triState" },
+            "dishwasher": { "$ref": "#/$defs/triState" },
+            "garage": { "$ref": "#/$defs/triState" },
+            "outdoorSpace": { "$ref": "#/$defs/triState" }
+          }
+        },
+        "confirmedAmenities": { "type": "string", "description": "Free-text amenity notes." },
+        "toVerify": { "type": "string" },
+        "contact": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["company", "phone", "email", "notes"],
+          "properties": {
+            "company": { "type": ["string", "null"] },
+            "phone": { "type": ["string", "null"] },
+            "email": { "type": ["string", "null"] },
+            "notes": { "type": "string" }
+          }
+        },
+        "score": { "type": ["number", "null"], "minimum": 0, "maximum": 5 },
+        "researchNotes": { "type": "string" },
+        "seedStatus": { "$ref": "#/$defs/status" },
+        "notes": { "type": "string" },
+        "appointment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["dateTime"],
+          "properties": {
+            "dateTime": {
+              "type": ["string", "null"],
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+              "description": "Local time, YYYY-MM-DDTHH:mm (what <input type=datetime-local> produces)."
+            }
+          }
+        }
+      }
+    },
+    "range": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": ["number", "null"], "minimum": 0 },
+        "max": { "type": ["number", "null"], "minimum": 0 }
+      }
+    },
+    "category": {
+      "enum": [
+        "zillow-favorite",
+        "whole-home",
+        "off-market",
+        "apartment-complex",
+        "julias-list",
+        "unverified",
+        "disqualified",
+        "manual"
+      ]
+    },
+    "propertyType": { "enum": ["house", "townhome", "apartment", "apartment-complex"] },
+    "petRule": {
+      "enum": ["allowed", "restricted", "not-allowed", "unknown"],
+      "description": "restricted = allowed with limits (size, weight, count) that may not fit us."
+    },
+    "laundry": { "enum": ["in-unit", "hookups", "none", "unknown"] },
+    "triState": { "enum": ["yes", "no", "unknown"] },
+    "status": { "enum": ["new", "accepted", "rejected"] }
+  }
+}

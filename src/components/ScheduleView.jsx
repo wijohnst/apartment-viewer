@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { formatRent, formatLayout } from '../utils/format.js'
 
 const TIGHT_GAP_MINUTES = 60
 // An appointment stays in "upcoming" until this long after its start time.
@@ -56,7 +57,7 @@ function AppointmentRow({ item, date, warning, showDay, onOpen }) {
       <div className="appt-info">
         <div className="appt-name">{listing.name}</div>
         <div className="appt-address">{listing.address}</div>
-        <div className="appt-meta">{[listing.rent, listing.bedsBaths].filter(Boolean).join(' · ')}</div>
+        <div className="appt-meta">{[formatRent(listing.rent), formatLayout(listing)].filter(Boolean).join(' · ')}</div>
         {warning && <div className="appt-warning">⚠ {warning}</div>}
       </div>
       {listing.address && (

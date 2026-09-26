@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { copyText } from '../utils/clipboard.js'
+import { validate } from '../utils/validate.js'
 
 // Strings (keys vs values), numbers, and true/false/null. Strings are matched
 // first, so digits inside a string stay part of the string.
@@ -36,8 +37,10 @@ function highlight(json) {
   return out
 }
 
-export default function ExportOverlay({ records, changedCount, onClose }) {
+export default function ExportOverlay({ records, changedCount, fileNeedsUpgrade, onClose }) {
   const json = useMemo(() => JSON.stringify(records, null, 2) + '\n', [records])
+  const validation = useMemo(() => validate(records), [records])
+  const [showErrors, setShowErrors] = useState(false)
   const highlighted = useMemo(() => highlight(json), [json])
   const [copyState, setCopyState] = useState('idle') // idle | copied | failed
   const preRef = useRef(null)
@@ -78,9 +81,11 @@ export default function ExportOverlay({ records, changedCount, onClose }) {
             <h2>Export listings.json</h2>
             <div className="address">
               {records.length} listings · {sizeKb} KB ·{' '}
-              {changedCount > 0
-                ? `includes ${changedCount} with local changes`
-                : 'no local changes — matches the current file'}
+              {fileNeedsUpgrade
+                ? 'upgrades listings.json to the new format'
+                : changedCount > 0
+                  ? `includes ${changedCount} with local changes`
+                  : 'no local changes — matches the current file'}
             </div>
           </div>
           <div className="header-actions">
@@ -98,6 +103,25 @@ export default function ExportOverlay({ records, changedCount, onClose }) {
             <p className="form-error">
               Couldn't copy automatically. The text is selected — copy it with ⌘C (or long-press → Copy on mobile).
             </p>
+          )}
+          {validation.valid ? (
+            <p className="schema-status valid">✓ Valid against listings.schema.json</p>
+          ) : (
+            <div className="schema-status invalid">
+              <button type="button" className="past-toggle" onClick={() => setShowErrors((v) => !v)}>
+                {showErrors ? '▾' : '▸'} ✗ {validation.errors.length} schema{' '}
+                {validation.errors.length === 1 ? 'problem' : 'problems'} — fix before replacing the file
+              </button>
+              {showErrors && (
+                <ul>
+                  {validation.errors.slice(0, 50).map((err, i) => (
+                    <li key={i}>
+                      <strong>{err.where}</strong>: {err.message}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           )}
           <p className="subtle export-hint">
             Replace the contents of <code>src/data/listings.json</code> with this. It includes your edits, added

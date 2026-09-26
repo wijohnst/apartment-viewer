@@ -13,6 +13,8 @@ npm run dev
 
 Then open the local URL Vite prints (usually http://localhost:5173).
 
+`npm run validate` checks `src/data/listings.json` against the schema.
+
 ## Data model
 
 Seed data lives in `src/data/listings.json`, migrated from the Notion doc's
@@ -25,16 +27,47 @@ listing has:
 - `category` — which Notion table it came from (`zillow-favorite`,
   `whole-home`, `off-market`, `apartment-complex`, `julias-list`,
   `unverified`, `disqualified`)
-- `propertyType`, `rent`, `bedsBaths`
+- `propertyType` — `house` | `townhome` | `apartment` | `apartment-complex`
+- `rent` — `{ min, max, note }` in whole dollars; `min === max` for one price,
+  `max: null` for "and up"; `note` keeps wording like "total"
+- `beds`, `baths` — `{ min, max }` ranges; `sqft` — integer or `null`
 - `source`, `sourceUrl` — where the listing was found and its live link
 - `images` — array of image URLs; the first is the preview image
-- `petPolicy`, `confirmedAmenities`, `toVerify`
+- `pets` — `{ cats, dogs, notes }`, each rule `allowed` | `restricted` |
+  `not-allowed` | `unknown` (restricted = allowed with limits like size or
+  count)
+- `amenities` — `{ laundry, ac, dishwasher, garage, outdoorSpace }`; laundry is
+  `in-unit` | `hookups` | `none` | `unknown`, the rest `yes` | `no` | `unknown`
+- `confirmedAmenities` (free-text amenity notes), `toVerify`
 - `contact` — `{ company, phone, email, notes }`
 - `score` — the 0–5 rating, or `null`
 - `researchNotes` — carried-over notes from the Notion research pass
 - `seedStatus` — the `new` / `accepted` / `rejected` state
 - `notes` — your notes on the listing (optional; defaults to empty)
 - `appointment` — `{ dateTime }` for a booked viewing (optional)
+
+### Schema
+
+`src/data/listings.schema.json` (JSON Schema 2020-12) defines the file and is
+the single source of truth for every enum — the app builds its dropdowns and
+labels from it (`src/constants.js` only adds display text). The schema is
+strict (`additionalProperties: false`, all fields required), so a typo'd or
+missing field fails validation. It's checked in three places:
+
+- **Export** shows ✓ valid or lists the problems before you copy
+- **`npm run validate`** from the command line
+- **VS Code** flags problems while editing `listings.json` (via
+  `.vscode/settings.json`)
+
+### Migration from the old free-text format
+
+The first version stored rent, beds/baths, property type, and pet policy as
+free text. `src/data/migrate.js` converts old records on load: rent and
+layout are parsed mechanically (original wording kept in `rent.note` or
+research notes), and pets/amenities come from a hand-reviewed table of the
+original 35 listings (original text kept in `pets.notes` and
+`confirmedAmenities`). Old-format local edits are converted too. Once
+`listings.json` has been replaced with an export, the migration is a no-op.
 
 ## App-managed state (local persistence)
 
@@ -106,6 +139,15 @@ yet", and past appointments are collapsed at the bottom. An appointment stays
 in the upcoming list until an hour after its start. Rows open the listing
 (where the time is edited) and have a Google Maps **Directions** link. The
 search bar filters the schedule too. Code: `src/components/ScheduleView.jsx`.
+
+## Filters
+
+**Filters** opens dropdowns for pets (cats & dogs OK / not ruled out / has
+limits / needs checking / ruled out), property type, max rent (uses the low
+end of a range), beds (uses the high end, so a 1–3 bd complex counts as 3),
+laundry, A/C, and dishwasher. They combine with search, apply to both the
+listings and schedule views, and tab counts reflect them. Definitions live in
+`src/utils/filters.js`.
 
 ## Search
 

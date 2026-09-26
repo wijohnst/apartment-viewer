@@ -1,4 +1,5 @@
-import { CATEGORY_LABELS, STATUS_LABELS } from '../constants.js'
+import { CATEGORY_LABELS, STATUS_LABELS, PROPERTY_TYPE_LABELS, PET_RULE_LABELS } from '../constants.js'
+import { formatRent, formatLayout } from './format.js'
 
 // Lowercase, strip accents, and drop commas/apostrophes so "$2,400" matches
 // "2400" and "julias" matches "Julia's".
@@ -96,16 +97,32 @@ function prepare(value, weight) {
 
 function searchableFields({ listing, entry }) {
   const contact = listing.contact || {}
+  const pets = listing.pets || {}
+  const a = listing.amenities || {}
+  // Only positive amenities are searchable, so "garage" finds places that have one.
+  const amenityWords = [
+    a.laundry === 'in-unit' && 'in-unit laundry washer dryer',
+    a.laundry === 'hookups' && 'washer dryer hookups',
+    a.ac === 'yes' && 'a/c ac air conditioning',
+    a.dishwasher === 'yes' && 'dishwasher',
+    a.garage === 'yes' && 'garage',
+    a.outdoorSpace === 'yes' && 'yard patio outdoor space',
+  ]
+    .filter(Boolean)
+    .join(' ')
   return [
     [listing.name, 3],
     [listing.address, 2],
     [CATEGORY_LABELS[listing.category] || listing.category, 1],
     [STATUS_LABELS[entry.status] || entry.status, 1],
-    [listing.propertyType, 1],
-    [listing.rent, 1],
-    [listing.bedsBaths, 1],
+    [PROPERTY_TYPE_LABELS[listing.propertyType] || listing.propertyType, 1],
+    [formatRent(listing.rent), 1],
+    [listing.rent?.note, 1],
+    [formatLayout(listing), 1],
     [listing.source, 1],
-    [listing.petPolicy, 1],
+    [`cats ${PET_RULE_LABELS[pets.cats] || ''} dogs ${PET_RULE_LABELS[pets.dogs] || ''}`, 1],
+    [pets.notes, 1],
+    [amenityWords, 1],
     [listing.confirmedAmenities, 1],
     [listing.toVerify, 1],
     [listing.researchNotes, 1],

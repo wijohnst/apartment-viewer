@@ -1,13 +1,27 @@
 import { useEffect, useState } from 'react'
-import { FIELD_GROUPS, toDraft, diffEdits } from '../utils/listing.js'
+import { FIELD_GROUPS, toDraft, diffEdits, validateDraft } from '../utils/listing.js'
+import {
+  PROPERTY_TYPE_LABELS,
+  PET_RULE_LABELS,
+  LAUNDRY_LABELS,
+  TRI_STATE_LABELS,
+  AMENITY_LABELS,
+} from '../constants.js'
+import { formatRent, formatLayout, petFit, PET_FIT_LABELS } from '../utils/format.js'
 
 function mapEmbedUrl(address) {
   return `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`
 }
 
-function FormField({ field, value, onChange, autoFocus }) {
+function FormField({ field, value, onChange, autoFocus, error }) {
   const id = `field-${field.key.replace(/\./g, '-')}`
-  const common = { id, value, autoFocus, onChange: (e) => onChange(e.target.value) }
+  const common = {
+    id,
+    value,
+    autoFocus,
+    'aria-invalid': error ? 'true' : undefined,
+    onChange: (e) => onChange(e.target.value),
+  }
 
   let control
   switch (field.type) {
@@ -27,17 +41,30 @@ function FormField({ field, value, onChange, autoFocus }) {
       )
       break
     case 'number':
-      control = <input {...common} type="number" min="0" max="5" step="0.5" />
+      control = (
+        <input
+          {...common}
+          type="number"
+          inputMode="decimal"
+          min={field.min}
+          max={field.max}
+          step={field.step ?? 'any'}
+        />
+      )
+      break
+    case 'range':
+    case 'money-range':
+      control = <input {...common} type="text" inputMode="decimal" placeholder={field.placeholder} />
       break
     default:
       control = <input {...common} type={field.type || 'text'} placeholder={field.placeholder} />
   }
 
   return (
-    <div className={`form-field ${field.wide ? 'wide' : ''}`}>
+    <div className={`form-field ${field.wide ? 'wide' : ''} ${error ? 'has-error' : ''}`}>
       <label htmlFor={id}>{field.label}</label>
       {control}
-      {field.hint && <small>{field.hint}</small>}
+      {error ? <small className="field-error">{error}</small> : field.hint && <small>{field.hint}</small>}
     </div>
   )
 }
@@ -51,9 +78,24 @@ function Section({ title, children }) {
   )
 }
 
+function Chip({ label, value, tone }) {
+  return (
+    <span className={`chip chip-${tone}`}>
+      <span className="chip-label">{label}</span> {value}
+    </span>
+  )
+}
+
+const RULE_TONE = { allowed: 'good', restricted: 'warn', 'not-allowed': 'bad', unknown: 'unknown' }
+const TRI_TONE = { yes: 'good', no: 'bad', unknown: 'unknown' }
+const LAUNDRY_TONE = { 'in-unit': 'good', hookups: 'good', none: 'bad', unknown: 'unknown' }
+
 function DetailView({ listing }) {
   const contact = listing.contact || {}
   const hasContact = contact.company || contact.phone || contact.email
+  const pets = listing.pets || {}
+  const amenities = listing.amenities || {}
+  const fit = petFit(pets)
 
   return (
     <>
@@ -74,8 +116,41 @@ function DetailView({ listing }) {
       </Section>
 
       <Section title="Rent & layout">
-        <p>{[listing.rent, listing.bedsBaths, listing.propertyType].filter(Boolean).join(' · ')}</p>
+        <p>
+          {[formatRent(listing.rent) || 'Rent unknown', formatLayout(listing), PROPERTY_TYPE_LABELS[listing.propertyType]]
+            .filter(Boolean)
+            .join(' · ')}
+        </p>
+        {listing.rent?.note && <p className="subtle">{listing.rent.note}</p>}
         {listing.score != null && <p className="subtle">Score: {listing.score}/5</p>}
+      </Section>
+
+      <Section title="Pets">
+        <div className="chip-row">
+          <span className={`chip chip-fit pets-${fit}`}>{PET_FIT_LABELS[fit]} for us</span>
+          <Chip label="Cats" value={PET_RULE_LABELS[pets.cats]} tone={RULE_TONE[pets.cats]} />
+          <Chip label="Dogs" value={PET_RULE_LABELS[pets.dogs]} tone={RULE_TONE[pets.dogs]} />
+        </div>
+        {pets.notes && <p className="subtle">{pets.notes}</p>}
+      </Section>
+
+      <Section title="Amenities">
+        <div className="chip-row">
+          <Chip
+            label={AMENITY_LABELS.laundry}
+            value={LAUNDRY_LABELS[amenities.laundry]}
+            tone={LAUNDRY_TONE[amenities.laundry]}
+          />
+          {['ac', 'dishwasher', 'garage', 'outdoorSpace'].map((key) => (
+            <Chip
+              key={key}
+              label={AMENITY_LABELS[key]}
+              value={TRI_STATE_LABELS[amenities[key]]}
+              tone={TRI_TONE[amenities[key]]}
+            />
+          ))}
+        </div>
+        {listing.confirmedAmenities && <p className="subtle">{listing.confirmedAmenities}</p>}
       </Section>
 
       <Section title="Contact information">
@@ -101,14 +176,6 @@ function DetailView({ listing }) {
           <p>Not on file</p>
         )}
         {contact.notes && <p className="subtle">{contact.notes}</p>}
-      </Section>
-
-      <Section title="Pet status">
-        <p>{listing.petPolicy || 'Unknown'}</p>
-      </Section>
-
-      <Section title="Confirmed amenities">
-        <p>{listing.confirmedAmenities || 'None confirmed yet'}</p>
       </Section>
 
       {listing.toVerify && (
@@ -143,6 +210,7 @@ export default function ListingOverlay({
   // New listings open straight into the form.
   const [draft, setDraft] = useState(() => (isNew ? toDraft(listing) : null))
   const [error, setError] = useState(null)
+  const [fieldErrors, setFieldErrors] = useState({})
   const [imageIndex, setImageIndex] = useState(0)
   const editing = draft !== null
   const status = entry.status
@@ -168,6 +236,7 @@ export default function ListingOverlay({
 
   function cancelEdit() {
     setError(null)
+    setFieldErrors({})
     if (isNew) onClose()
     else setDraft(null)
   }
@@ -179,10 +248,17 @@ export default function ListingOverlay({
       setError('Add at least a name or an address.')
       return
     }
+    const errors = validateDraft(draft)
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors)
+      setError('Fix the highlighted fields before saving.')
+      return
+    }
     // Fall back to the street address as the name.
     const finalDraft = name ? draft : { ...draft, name: address.split(',')[0].trim() }
     onSaveEdits(diffEdits(seed, finalDraft))
     setError(null)
+    setFieldErrors({})
     setDraft(null)
     setImageIndex(0)
   }
@@ -285,7 +361,13 @@ export default function ListingOverlay({
                           field={field}
                           value={draft[field.key]}
                           autoFocus={isNew && field.key === 'name'}
-                          onChange={(value) => setDraft((d) => ({ ...d, [field.key]: value }))}
+                          error={fieldErrors[field.key]}
+                          onChange={(value) => {
+                            setDraft((d) => ({ ...d, [field.key]: value }))
+                            if (fieldErrors[field.key]) {
+                              setFieldErrors(({ [field.key]: _, ...rest }) => rest)
+                            }
+                          }}
                         />
                       ))}
                     </div>

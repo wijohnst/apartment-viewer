@@ -1,4 +1,5 @@
 import { applyEdits, blankListing, pruneEdits } from './listing.js'
+import { migrateEdits, normalizeListing } from '../data/migrate.js'
 
 const STORAGE_KEY = 'apartment-viewer/state/v1'
 
@@ -16,7 +17,12 @@ export function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return {}
-    return JSON.parse(raw)
+    // Edits saved before the v2 data model used free-text keys; convert them.
+    const state = JSON.parse(raw)
+    Object.values(state).forEach((entry) => {
+      if (entry && entry.edits) entry.edits = migrateEdits(entry.edits)
+    })
+    return state
   } catch (err) {
     console.error('Failed to load apartment-viewer state from localStorage', err)
     return {}
@@ -100,11 +106,14 @@ const RECORD_KEYS = [
   'category',
   'propertyType',
   'rent',
-  'bedsBaths',
+  'beds',
+  'baths',
+  'sqft',
   'source',
   'sourceUrl',
   'images',
-  'petPolicy',
+  'pets',
+  'amenities',
   'confirmedAmenities',
   'toVerify',
   'contact',
@@ -121,12 +130,12 @@ const RECORD_KEYS = [
 export function buildSeedFile(seedListings, state) {
   return allSeeds(seedListings, state).map((seed) => {
     const entry = resolveEntry(seed, state[seed.id])
-    const merged = {
+    const merged = normalizeListing({
       ...applyEdits(seed, entry.edits),
       seedStatus: entry.status,
       notes: entry.notes || '',
       appointment: { dateTime: entry.appointment?.dateTime || null },
-    }
+    })
     const record = {}
     RECORD_KEYS.forEach((key) => {
       if (key in merged) record[key] = merged[key]

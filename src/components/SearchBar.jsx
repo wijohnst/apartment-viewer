@@ -30,7 +30,8 @@ export default function SearchBar({ value, onChange }) {
             e.currentTarget.blur()
           }
         }}
-        placeholder="Search address, name, pets, amenities, notes…  (press / to focus)"
+        placeholder="Search address, pets, amenities, notes…"
+        title="Press / to focus search"
         aria-label="Search listings"
         spellCheck={false}
         autoComplete="off"

@@ -793,3 +793,164 @@ a {
     grid-area: directions;
   }
 }
+
+/* Filters */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px 12px;
+  padding: 12px 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 140px;
+  flex: 1 1 140px;
+  max-width: 200px;
+}
+
+.filter label {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.filter select {
+  padding: 6px 8px;
+  font-size: 0.85rem;
+}
+
+.filter.active select {
+  border-color: var(--accent);
+  background: #eef5f0;
+}
+
+.btn.has-count {
+  background: #e5f2ea;
+  color: var(--accent-dark);
+}
+
+.link-button {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: var(--accent-dark);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .filter {
+    max-width: none;
+    flex-basis: calc(50% - 6px);
+    min-width: 0;
+  }
+}
+
+/* Structured detail chips */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.chip {
+  font-size: 0.8rem;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--text);
+}
+
+.chip-label {
+  color: var(--muted);
+}
+
+.chip-good {
+  background: #e5f2ea;
+}
+
+.chip-warn {
+  background: #fbf0dc;
+}
+
+.chip-bad {
+  background: #f6e6e6;
+}
+
+.chip-unknown {
+  background: var(--badge-bg);
+  color: var(--muted);
+}
+
+.chip-fit {
+  font-weight: 600;
+}
+
+.chip-fit.pets-fits,
+.badge.pets-fits {
+  background: #e5f2ea;
+  color: var(--accent-dark);
+}
+
+.chip-fit.pets-restricted,
+.badge.pets-restricted {
+  background: #fbf0dc;
+  color: #8a5a12;
+}
+
+.chip-fit.pets-no,
+.badge.pets-no {
+  background: #f6e6e6;
+  color: var(--reject);
+}
+
+.detail-section p {
+  white-space: pre-line;
+}
+
+/* Form validation */
+.form-field.has-error input,
+.form-field.has-error textarea,
+.form-field.has-error select {
+  border-color: var(--reject);
+}
+
+.field-error {
+  color: var(--reject) !important;
+}
+
+/* Export schema status */
+.schema-status {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+}
+
+.schema-status.valid {
+  color: var(--accent-dark);
+}
+
+.schema-status.invalid {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f6e6e6;
+  color: var(--reject);
+}
+
+.schema-status.invalid .past-toggle {
+  color: var(--reject);
+}
+
+.schema-status ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  max-height: 180px;
+  overflow: auto;
+}

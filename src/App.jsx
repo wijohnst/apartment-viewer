@@ -1,15 +1,22 @@
 import { useEffect, useMemo, useState } from 'react'
-import seedListings from './data/listings.json'
+import rawListings from './data/listings.json'
+import { migrateListing, isLegacyListing } from './data/migrate.js'
 import ListingCard from './components/ListingCard.jsx'
 import ListingOverlay from './components/ListingOverlay.jsx'
 import ExportOverlay from './components/ExportOverlay.jsx'
 import ScheduleView, { scheduleCounts } from './components/ScheduleView.jsx'
 import StatusTabs from './components/StatusTabs.jsx'
 import SearchBar from './components/SearchBar.jsx'
+import FilterBar from './components/FilterBar.jsx'
+import { EMPTY_FILTERS, activeFilterCount, applyFilters } from './utils/filters.js'
 import { loadState, saveState, resolveEntry, allSeeds, isDirty, pruneState, buildSeedFile } from './utils/storage.js'
 import { applyEdits, blankListing, newListingId, addressKey } from './utils/listing.js'
 import { searchListings } from './utils/fuzzy.js'
 
+// listings.json may still be in the old free-text format; migrate on load.
+// Export writes the new format, which you paste back into the file.
+const seedListings = rawListings.map(migrateListing)
+const fileNeedsUpgrade = rawListings.some(isLegacyListing)
 const seedIds = new Set(seedListings.map((l) => l.id))
 
 function viewFromHash() {
@@ -26,6 +33,9 @@ export default function App() {
   const [exportOpen, setExportOpen] = useState(false)
   // 'listings' | 'schedule', mirrored in the URL hash so #schedule is linkable
   const [view, setView] = useState(viewFromHash)
+  const [filters, setFilters] = useState(EMPTY_FILTERS)
+  const [filtersOpen, setFiltersOpen] = useState(false)
+  const filterCount = activeFilterCount(filters)
 
   useEffect(() => {
     const onHashChange = () => setView(viewFromHash())
@@ -101,7 +111,7 @@ export default function App() {
   }
 
   // Search applies across every tab; tab counts reflect the current search.
-  const matches = useMemo(() => searchListings(items, query), [items, query])
+  const matches = useMemo(() => searchListings(applyFilters(items, filters), query), [items, filters, query])
 
   const counts = useMemo(() => {
     const c = { all: matches.length, new: 0, accepted: 0, rejected: 0 }
@@ -168,27 +178,54 @@ export default function App() {
           <button type="button" className="btn primary" onClick={startNewListing}>
             + Add listing
           </button>
+          <button
+            type="button"
+            className={`btn secondary ${filterCount > 0 ? 'has-count' : ''}`}
+            onClick={() => setFiltersOpen((v) => !v)}
+            aria-expanded={filtersOpen}
+          >
+            Filters{filterCount > 0 ? ` · ${filterCount}` : ''}
+          </button>
           <button type="button" className="btn secondary" onClick={() => setExportOpen(true)}>
-            Export{changedCount > 0 ? ` · ${changedCount} changed` : ''}
+            Export
+            {fileNeedsUpgrade ? ' · format upgrade' : changedCount > 0 ? ` · ${changedCount} changed` : ''}
           </button>
         </div>
+        {filtersOpen && <FilterBar filters={filters} onChange={setFilters} />}
         {view === 'listings' && <StatusTabs active={activeTab} counts={counts} onChange={setActiveTab} />}
       </div>
 
-      {view === 'schedule' && query.trim() && (
-        <p className="result-summary">Showing appointments for listings matching “{query.trim()}”</p>
+      {view === 'schedule' && (query.trim() || filterCount > 0) && (
+        <p className="result-summary">
+          Showing appointments for listings matching {query.trim() ? `“${query.trim()}”` : ''}
+          {query.trim() && filterCount > 0 ? ' and ' : ''}
+          {filterCount > 0 ? `${filterCount} ${filterCount === 1 ? 'filter' : 'filters'}` : ''}
+        </p>
       )}
 
-      {view === 'listings' && query.trim() && (
+      {view === 'listings' && (query.trim() || filterCount > 0) && (
         <p className="result-summary">
-          {visible.length} {visible.length === 1 ? 'match' : 'matches'} for “{query.trim()}”, best first
+          {visible.length} {visible.length === 1 ? 'listing' : 'listings'}
+          {query.trim() ? ` matching “${query.trim()}”` : ''}
+          {filterCount > 0 ? ` · ${filterCount} ${filterCount === 1 ? 'filter' : 'filters'} on` : ''}
+          {query.trim() ? ', best first' : ''}
+          {filterCount > 0 && !filtersOpen && (
+            <>
+              {' · '}
+              <button type="button" className="link-button" onClick={() => setFilters(EMPTY_FILTERS)}>
+                clear filters
+              </button>
+            </>
+          )}
         </p>
       )}
 
       {view === 'schedule' ? (
         <ScheduleView items={matches} onOpen={setOpenId} />
       ) : visible.length === 0 ? (
-        <div className="empty-state">{query.trim() ? 'No listings match that search.' : 'Nothing here yet.'}</div>
+        <div className="empty-state">
+          {query.trim() || filterCount > 0 ? 'No listings match your search and filters.' : 'Nothing here yet.'}
+        </div>
       ) : (
         <div className="grid">
           {visible.map(({ listing, entry, seed, custom }) => (
@@ -232,7 +269,12 @@ export default function App() {
       )}
 
       {exportOpen && (
-        <ExportOverlay records={exportRecords} changedCount={changedCount} onClose={() => setExportOpen(false)} />
+        <ExportOverlay
+          records={exportRecords}
+          changedCount={changedCount}
+          fileNeedsUpgrade={fileNeedsUpgrade}
+          onClose={() => setExportOpen(false)}
+        />
       )}
     </div>
   )
