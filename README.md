@@ -95,6 +95,18 @@ first, with an "Added manually" badge, and have a "Delete listing" action in
 the overlay (until they've been exported into the file, after which they're
 regular listings).
 
+## Schedule
+
+The **Listings | Schedule** switch at the top flips to a schedule of viewing
+appointments (linkable as `#schedule`). It shows accepted listings with an
+appointment, grouped by day in time order (Today/Tomorrow labeled), and warns
+when a viewing starts less than an hour after the previous one that day.
+Accepted listings without a time are listed under "Accepted — not scheduled
+yet", and past appointments are collapsed at the bottom. An appointment stays
+in the upcoming list until an hour after its start. Rows open the listing
+(where the time is edited) and have a Google Maps **Directions** link. The
+search bar filters the schedule too. Code: `src/components/ScheduleView.jsx`.
+
 ## Search
 
 The search bar (press `/` to focus, `Esc` to clear) fuzzy-matches across

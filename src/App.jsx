@@ -3,6 +3,7 @@ import seedListings from './data/listings.json'
 import ListingCard from './components/ListingCard.jsx'
 import ListingOverlay from './components/ListingOverlay.jsx'
 import ExportOverlay from './components/ExportOverlay.jsx'
+import ScheduleView, { scheduleCounts } from './components/ScheduleView.jsx'
 import StatusTabs from './components/StatusTabs.jsx'
 import SearchBar from './components/SearchBar.jsx'
 import { loadState, saveState, resolveEntry, allSeeds, isDirty, pruneState, buildSeedFile } from './utils/storage.js'
@@ -10,6 +11,10 @@ import { applyEdits, blankListing, newListingId, addressKey } from './utils/list
 import { searchListings } from './utils/fuzzy.js'
 
 const seedIds = new Set(seedListings.map((l) => l.id))
+
+function viewFromHash() {
+  return window.location.hash === '#schedule' ? 'schedule' : 'listings'
+}
 
 export default function App() {
   const [appState, setAppState] = useState(() => pruneState(seedListings, loadState()))
@@ -19,6 +24,20 @@ export default function App() {
   // id of a listing being created that hasn't been saved yet
   const [pendingNewId, setPendingNewId] = useState(null)
   const [exportOpen, setExportOpen] = useState(false)
+  // 'listings' | 'schedule', mirrored in the URL hash so #schedule is linkable
+  const [view, setView] = useState(viewFromHash)
+
+  useEffect(() => {
+    const onHashChange = () => setView(viewFromHash())
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+
+  function switchView(next) {
+    setView(next)
+    const url = next === 'schedule' ? '#schedule' : window.location.pathname + window.location.search
+    window.history.replaceState(null, '', url)
+  }
 
   useEffect(() => {
     saveState(appState)
@@ -93,6 +112,7 @@ export default function App() {
   }, [matches])
 
   const visible = activeTab === 'all' ? matches : matches.filter(({ entry }) => entry.status === activeTab)
+  const upcomingCount = scheduleCounts(items).upcoming
 
   let open = null
   if (openId) {
@@ -123,6 +143,26 @@ export default function App() {
       </div>
 
       <div className="toolbar">
+        <div className="view-switch" role="tablist" aria-label="View">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === 'listings'}
+            className={view === 'listings' ? 'active' : ''}
+            onClick={() => switchView('listings')}
+          >
+            Listings
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === 'schedule'}
+            className={view === 'schedule' ? 'active' : ''}
+            onClick={() => switchView('schedule')}
+          >
+            Schedule{upcomingCount > 0 ? ` (${upcomingCount})` : ''}
+          </button>
+        </div>
         <div className="toolbar-row">
           <SearchBar value={query} onChange={setQuery} />
           <button type="button" className="btn primary" onClick={startNewListing}>
@@ -132,16 +172,22 @@ export default function App() {
             Export{changedCount > 0 ? ` · ${changedCount} changed` : ''}
           </button>
         </div>
-        <StatusTabs active={activeTab} counts={counts} onChange={setActiveTab} />
+        {view === 'listings' && <StatusTabs active={activeTab} counts={counts} onChange={setActiveTab} />}
       </div>
 
-      {query.trim() && (
+      {view === 'schedule' && query.trim() && (
+        <p className="result-summary">Showing appointments for listings matching “{query.trim()}”</p>
+      )}
+
+      {view === 'listings' && query.trim() && (
         <p className="result-summary">
           {visible.length} {visible.length === 1 ? 'match' : 'matches'} for “{query.trim()}”, best first
         </p>
       )}
 
-      {visible.length === 0 ? (
+      {view === 'schedule' ? (
+        <ScheduleView items={matches} onOpen={setOpenId} />
+      ) : visible.length === 0 ? (
         <div className="empty-state">{query.trim() ? 'No listings match that search.' : 'Nothing here yet.'}</div>
       ) : (
         <div className="grid">
