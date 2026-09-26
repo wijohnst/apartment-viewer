@@ -1,0 +1,1110 @@
+[
+  {
+    "id": "manual-muirs0fh-ibna",
+    "name": "Willamette Park",
+    "address": "825 Harritt Dr NW, Salem, OR 97304",
+    "category": "manual",
+    "propertyType": "Apartment",
+    "rent": "1944",
+    "bedsBaths": "3/2",
+    "source": "Zillow.com",
+    "sourceUrl": "https://www.zillow.com/homedetails/825-Harritt-Dr-NW-316-Salem-OR-97304/464100600_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/8df3d05e47e627775cb8b0e2985c21cd-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/d59558ef020553000d882b962eaea3b5-cc_ft_768.webp",
+      "https://photos.zillowstatic.com/fp/70b946749d353bca9bc2487d5190b572-cc_ft_768.webp"
+    ],
+    "petPolicy": "Pets okay",
+    "confirmedAmenities": "Onsite dog area",
+    "toVerify": "",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": 3,
+    "researchNotes": "",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": "2026-10-02T10:45"
+    }
+  },
+  {
+    "id": "manual-muirbnmn-dasc",
+    "name": "2320 Audubon Ave",
+    "address": "2320 Audubon Ave Salem, Oregon 97302",
+    "category": "manual",
+    "propertyType": "House",
+    "rent": "3100",
+    "bedsBaths": "3/2.5",
+    "source": "Zillow.com",
+    "sourceUrl": "https://www.zillow.com/homedetails/2320-Audubon-Ave-Salem-OR-97302/2053160366_zpid/?utm_campaign=iosappmessage&utm_medium=referral&utm_source=txtshare",
+    "images": [
+      "https://photos.zillowstatic.com/fp/4ed859c716deba3b178d8ec992e764a0-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/6a4429d79b8adfdafb1ddd9397b25675-uncropped_scaled_within_1536_1152.webp",
+      "https://photos.zillowstatic.com/fp/cb0f6181b86854f3612958c7cedced6a-cc_ft_768.webp"
+    ],
+    "petPolicy": "- Cats and dog okay",
+    "confirmedAmenities": "",
+    "toVerify": "",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": "- Contacted 2026/09/26"
+    },
+    "score": null,
+    "researchNotes": "",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "manual-muiqvdds-pzkw",
+    "name": "1328 Lupin Lane",
+    "address": "1328 Lupin Ln NW Salem, OR 97304",
+    "category": "manual",
+    "propertyType": "Home",
+    "rent": "2600",
+    "bedsBaths": "3/2.5",
+    "source": "Zillow.com",
+    "sourceUrl": "https://www.zillow.com/homedetails/1328-Lupin-Ln-NW-Salem-OR-97304/89802568_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/4e8353e8e94eadedfda3b769f1f2a7c1-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/62aaeb97b6032d7d116eda1a2d624c6c-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/220fd446da2bb2239828d371e7c6b590-cc_ft_768.webp",
+      "https://photos.zillowstatic.com/fp/4ceea2ad180cdfdeca8499b85222bcb7-cc_ft_1536.webp"
+    ],
+    "petPolicy": "- Cats, small dogs okay",
+    "confirmedAmenities": "",
+    "toVerify": "",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": "- Contacted 2026/09/26"
+    },
+    "score": 3.5,
+    "researchNotes": "- Good backyard\n- Detached garage",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "manual-muiqqxi4-e48u",
+    "name": "3882 Lone Oak Rd.",
+    "address": "3882 Lone Oak Rd SE, Salem, OR 97302",
+    "category": "manual",
+    "propertyType": "Home",
+    "rent": "2495",
+    "bedsBaths": "3/2",
+    "source": "Zillow.com",
+    "sourceUrl": "https://www.zillow.com/homedetails/3882-Lone-Oak-Rd-SE-Salem-OR-97302/58484894_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/674afe64df56acad1a0ffb4f8fe0eac1-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/341e990666a190246ada5ba7dba1967a-cc_ft_768.webp",
+      "https://photos.zillowstatic.com/fp/67415ce0fb8bbffb11d08f828856f044-cc_ft_768.webp"
+    ],
+    "petPolicy": "- small dogs okay\n- cats unconfimred",
+    "confirmedAmenities": "",
+    "toVerify": "- cats?",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": "- Contacted 2026/009/2026"
+    },
+    "score": 3,
+    "researchNotes": "",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "manual-muiqhpoi-p2wr",
+    "name": "South Block Apartments",
+    "address": "315 Commercial Street",
+    "category": "manual",
+    "propertyType": "Apartment",
+    "rent": "2500",
+    "bedsBaths": "3/2",
+    "source": "Apartments.com",
+    "sourceUrl": "https://www.apartments.com/south-block-apartments-salem-or/sbj25s4/",
+    "images": [
+      "https://images1.apartments.com/i2/yN4B-WtiFXq4pF76LjI3eejOLU6cU7MDSCUIaEONRrs/111/south-block-apartments-salem-or-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/MGYM0oBrW7Lg9nCXACWqqzhROy68KBB-uBeSrWpuGug/116/south-block-apartments-salem-or-primary-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/pA_0JTx1Pr5HaMEhcejM22bqWF6DL8mbmuppbuHyOnE/111/south-block-apartments-salem-or-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/vNxb76H0mVhaD2pomfo4aaauslZtUCzZKvTgYgiBzdI/111/south-block-apartments-salem-or-building-photo.jpg?p=1"
+    ],
+    "petPolicy": "- unconfimed",
+    "confirmedAmenities": "",
+    "toVerify": "",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": "- Emailed 2026/09/26"
+    },
+    "score": 4,
+    "researchNotes": "",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "alta-view-dr-s-1715",
+    "name": "1715 Alta View Dr S",
+    "address": "1715 Alta View Dr S, Salem, OR 97302",
+    "category": "zillow-favorite",
+    "propertyType": "House",
+    "rent": "$2,400",
+    "bedsBaths": "3bd/2ba, 1,648 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/1715-Alta-View-Dr-S-Salem-OR-97302/53037599_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/de13b374c3710338dab8dff3995f2bc5-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/b79d47ff16a8e1c9e66affa208fbc654-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/52f427909e8d01a98c29081c02c6dc61-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4ffd6dfae32403b151a94a666c1ec8e4-cc_ft_576.jpg"
+    ],
+    "petPolicy": "Unconfirmed — not listed, needs a direct call",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": 4,
+    "researchNotes": "One of our favorites. Mid-century modern.",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "ammon-st-nw-1494",
+    "name": "1494 Ammon St NW",
+    "address": "1494 Ammon St NW, Salem, OR 97304",
+    "category": "zillow-favorite",
+    "propertyType": "House",
+    "rent": "$2,550",
+    "bedsBaths": "3bd/2ba, 1,600 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/1494-Ammon-St-NW-Salem-OR-97304/48508010_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/e28dec16d83d15ee955eb7e6014e7044-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/6254ffae0ecfa123eea0998f728c4df9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4bd1e82de8346030c8b8cd1402a4d7f7-cc_ft_576.jpg"
+    ],
+    "petPolicy": "Accepted",
+    "confirmedAmenities": "",
+    "toVerify": "AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "West Salem — same longer-commute flag as other West Salem entries.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "myers-st-s-295",
+    "name": "295 Myers St S",
+    "address": "295 Myers St S, Salem, OR 97302",
+    "category": "zillow-favorite",
+    "propertyType": "House",
+    "rent": "$2,850",
+    "bedsBaths": "4bd/3ba, 2,496 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/295-Myers-St-S-Salem-OR-97302/53053269_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/85bb6e437801bf93c5ed98b98b3f31a5-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/d4b91e5e976380838c785c09b5ed0120-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3f9192e4edd2a90dcddcc046d1ff187f-cc_ft_576.jpg"
+    ],
+    "petPolicy": "- Cats okat",
+    "confirmedAmenities": "",
+    "toVerify": "Dog?, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "4bd exceeds the 2-3bd target range, but Will & Julia saved it, so flagging rather than dropping.",
+    "seedStatus": "accepted",
+    "notes": "- contacted 09/26 via Zillow\n",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "d-st-ne-2788",
+    "name": "2788 D St NE",
+    "address": "2788 D St NE, Salem, OR 97301",
+    "category": "zillow-favorite",
+    "propertyType": "House",
+    "rent": "$2,400",
+    "bedsBaths": "3bd/2.5ba, 1,661 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/2788-D-St-NE-Salem-OR-97301/346966503_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/a79347f10392e3e2d19026be2c019cfd-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/22138f90f5eb9395b363b3ebddf3b3af-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e6f92c95b05817a538733b690a9c6e67-cc_ft_576.jpg"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": "- Contacted 2026/09/26"
+    },
+    "score": null,
+    "researchNotes": "",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": "2026-10-03T09:00"
+    }
+  },
+  {
+    "id": "summer-st-se-2530",
+    "name": "2530 Summer St SE",
+    "address": "2530 Summer St SE, Salem, OR 97302",
+    "category": "zillow-favorite",
+    "propertyType": "House",
+    "rent": "$2,650",
+    "bedsBaths": "4bd/2ba, 1,926 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/2530-Summer-St-SE-Salem-OR-97302/53038680_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/7277ca9c7c2a48e4a86783a6f1035975-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/51aef33c51a81cfcebe01c5a54324cb0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c13522314fa5bd772b9de094655857f4-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/24fcb8ca690b8442583800b89de82ec6-cc_ft_576.jpg"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "4bd, same over-bedroom-count note as 295 Myers St S.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "mccoy-ave-ne-1409",
+    "name": "1409 McCoy Ave NE",
+    "address": "1409 McCoy Ave NE, Salem, OR 97301",
+    "category": "zillow-favorite",
+    "propertyType": "House",
+    "rent": "$1,995",
+    "bedsBaths": "3bd/2ba, 1,444 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/1409-McCoy-Ave-NE-Salem-OR-97301/53033461_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/517f87d98b278093c2f55e1d284299f2-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/c40df0de7e1f988f02b21510c85a5dac-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/64f0a22ee621603ed311eaef49427f51-cc_ft_576.jpg"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "village-center-dr-3731",
+    "name": "3731 Village Center Dr",
+    "address": "3731 Village Center Dr, Salem, OR 97302",
+    "category": "zillow-favorite",
+    "propertyType": "House",
+    "rent": "$2,895",
+    "bedsBaths": "3bd/3.5ba, 2,468 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/3731-Village-Center-Dr-Salem-OR-97302/98830309_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/c5a0d948706e27d782593346c0400967-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/32201b4aeb9ffa04689c35cb860b51e1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/71b6c5a21a9374424056aa5ca0a4acb4-cc_ft_576.jpg"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "kari-dawn-ave-se-2064",
+    "name": "2064 Kari Dawn Ave SE",
+    "address": "2064 Kari Dawn Ave SE, Salem, OR 97306",
+    "category": "zillow-favorite",
+    "propertyType": "House",
+    "rent": "$2,395",
+    "bedsBaths": "3bd/2.5ba, 1,430 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/2064-Kari-Dawn-Ave-SE-Salem-OR-97306/68826375_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/cd8ced67e7b79e622f25aa7f60451684-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/1cf52d4b37ff96deff68ce212b83eab2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/60b40350e3d7659e0a1d9d9e72ccfc5b-cc_ft_576.jpg"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "magnolia36-maci-elle-ct-se-3494",
+    "name": "Magnolia36 — 3494 Maci Elle Ct SE",
+    "address": "3494 Maci Elle Ct SE, Salem, OR 97302",
+    "category": "zillow-favorite",
+    "propertyType": "Apartment",
+    "rent": "$2,350",
+    "bedsBaths": "3bd/2.5ba",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/3494-Maci-Elle-Ct-SE-BE1DA7EFC-Salem-OR-97302/448662811_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/bbafe857749bee6128e8c751ebfcfa8e-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/d95edb82047f6869353ce45d9d94ff77-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/e42154e41ef11e1b34abc6fb8d4ea7f5-cc_ft_1536.webp"
+    ],
+    "petPolicy": "Confirmed: cats + dogs allowed",
+    "confirmedAmenities": "In-unit W/D, wall-mounted A/C, dishwasher, attached garage",
+    "toVerify": "",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": "- Contacted 2026/09/26"
+    },
+    "score": null,
+    "researchNotes": "Confirms the existing Magnolia36 entry from Julia's list — strongest amenity match of that batch. See also julias-list-magnolia36.",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "magnolia28-strong-heights-ln-se-2315",
+    "name": "Magnolia28 — 2315 Strong Heights Ln SE",
+    "address": "2315 Strong Heights Ln SE, Salem, OR 97302",
+    "category": "zillow-favorite",
+    "propertyType": "Apartment",
+    "rent": "$2,350",
+    "bedsBaths": "3bd/2.5ba, 1,335 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/2315-Strong-Heights-Ln-SE-3B-2BA-1335SQFT-Salem-OR-97302/443195963_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/5f9a398688346d4a4bb411540fe0d5cb-cc_ft_1152.jpg",
+      "https://photos.zillowstatic.com/fp/eb687f4a67de7432c7f4be53bbfc4c36-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/5352cb52dd152e6804539007cb13bd81-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/8fd59c96613f83b708d4d666af324974-cc_ft_1536.webp"
+    ],
+    "petPolicy": "Unconfirmed — sibling property to Magnolia36/98, likely similar policy",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "New sibling property to Magnolia36/98.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "fairway-waln-dr-se-1691-unit221",
+    "name": "The Fairway — Unit 221",
+    "address": "1691 Waln Dr SE #221, Salem, OR 97306",
+    "category": "zillow-favorite",
+    "propertyType": "Apartment",
+    "rent": "$1,950 total",
+    "bedsBaths": "3bd/2ba, 1,219 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/1691-Waln-Dr-SE-221-Salem-OR-97306/465441960_zpid/",
+    "images": [
+      "https://photos.zillowstatic.com/fp/fcb1566c10c165491233f90a63e22b0b-cc_ft_1152.jpg",
+      "https://photos.zillowstatic.com/fp/d1ab6bc21f797431871b97482595ce69-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/84754964fcd14d1a4a1f517f8a6d3abf-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/91fc7ac92b25b9be647fed1f6ddf5164-cc_ft_1536.webp"
+    ],
+    "petPolicy": "Pets welcome (per julias-list Fairway entry)",
+    "confirmedAmenities": "A/C, in-unit W/D, dishwasher",
+    "toVerify": "Exact unit pricing/availability",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Confirms the existing Fairway entry from Julia's list. See also julias-list-the-fairway.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "the-grove-apartments-outward-rd-se-3955",
+    "name": "The Grove Apartments",
+    "address": "3955 Outward Rd SE, Salem, OR 97302",
+    "category": "zillow-favorite",
+    "propertyType": "Apartment complex",
+    "rent": "From $1,525 (1bd) / $2,000 (3bd)",
+    "bedsBaths": "1-3bd",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/apartments/salem-or/the-grove-apartments/Chfxbg/",
+    "images": [
+      "https://images.rentable.co/100023953/118487853/large.jpeg"
+    ],
+    "petPolicy": "Pets allowed, limit 2 per unit (would need exception for 2 cats + 1 dog)",
+    "confirmedAmenities": "In-unit W/D, pool/gym/gated dog park",
+    "toVerify": "AC not explicitly listed",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Confirms the existing Grove entry from Julia's list. See also julias-list-the-grove.",
+    "seedStatus": "rejected",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "titan-hill-townhomes-linwood-st-nw-1809",
+    "name": "Titan Hill Townhomes",
+    "address": "1809 Linwood St NW, Salem, OR 97304",
+    "category": "zillow-favorite",
+    "propertyType": "Apartment complex",
+    "rent": "$2,614+",
+    "bedsBaths": "3bd",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/apartments/salem-or/titan-hill-townhomes/CmmTLN/",
+    "images": [
+      "https://images1.apartments.com/i2/MestG-aoBe0m0-GK1gnK1bJJbIAA7vcgyP7hKP-2GU8/116/titan-hill-townhomes-salem-or-primary-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/RJw-TeH9aIAYB3QlJQ5ENnGwtJlGVBhbs-BmYWE51cg/111/titan-hill-townhomes-salem-or-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/oRLO3G6FFijDGtJvQKGM3G4MmG4gdERbQ2cezWxJWAQ/111/titan-hill-townhomes-salem-or-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/0-lwJvTs-3vpotZc8SgkmoYsRMH75hBgiIe60kiKRVM/111/titan-hill-townhomes-salem-or-building-photo.jpg?p=1"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": "(971) 260-4453",
+      "email": null,
+      "notes": "Pull into the driveway off of Linwood St. and take a sharp Left all the way to the end of the road to the left is the office. Suite 119\n\nPark Infront of the office.  If this spot in not available, you can park at the entrance of the property in guest parking."
+    },
+    "score": null,
+    "researchNotes": "Confirms this is a real, active listing — moved out of Unverified. West Salem, same commute flag as other West Salem entries.\n\nLarge closets",
+    "seedStatus": "accepted",
+    "notes": "",
+    "appointment": {
+      "dateTime": "2026-10-02T14:00"
+    }
+  },
+  {
+    "id": "the-meridian-commercial-st-se-777",
+    "name": "The Meridian — Suite 211",
+    "address": "777 Commercial St SE Suite 211, Salem, OR 97301",
+    "category": "zillow-favorite",
+    "propertyType": "Apartment",
+    "rent": "$2,495 total",
+    "bedsBaths": "3bd/2ba, 1,432 sqft",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/homedetails/777-Commercial-St-SE-SUITE-211-Salem-OR-97301/89611917_zpid/",
+    "images": [
+      "https://images1.apartments.com/i2/zfCJhNGY-IyyMk5TjY3ETz9ndTlXqmMA13RYf-YhAoc/116/the-meridian-apartments-salem-or-primary-photo.jpg",
+      "https://images1.apartments.com/i2/jHrHdxsi9UePb7WXQU8lGuZgWHkIpeY2TpT6V6IR9N4/111/the-meridian-apartments-salem-or-willamette-view.jpg",
+      "https://images1.apartments.com/i2/-IHRETzRO5FJPER9d7A2isGmqcRhMdgSz9gDsByoHnQ/111/the-meridian-apartments-salem-or-2br-2ba---1479sf.jpg",
+      "https://images1.apartments.com/i2/8Zh1Kq6aM586SQIH15pL95EwGqHWny_PEoA-WZy0FHY/111/the-meridian-apartments-salem-or-2br-2ba---1479sf.jpg"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Confirms The Meridian is genuinely leasing residential units — moved out of Unverified. Near downtown, ~2 mi from Julia's office.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "sunnyview-townhomes-sunnyview-rd-ne-3930",
+    "name": "Sunnyview Townhomes",
+    "address": "3930 Sunnyview Rd NE, Salem, OR 97305",
+    "category": "zillow-favorite",
+    "propertyType": "Apartment complex",
+    "rent": "$1,695+",
+    "bedsBaths": "3bd",
+    "source": "Zillow",
+    "sourceUrl": "https://www.zillow.com/apartments/salem-or/sunnyview-townhomes/Chc9Rv/",
+    "images": [
+      "https://images1.apartments.com/i2/0oRaHONiDBdTu8LYkQ9ZWx-WhFYX5bV9bUFJaY-bpvw/116/sunnyview-townhomes-salem-or-sunnyview-townhomes-three-bedroom-kitche.jpg"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "",
+    "toVerify": "Pet policy, AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Confirms real, active listing — moved out of Unverified. NE Salem, same commute flag as other NE Salem entries.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "heather-ln-se-1198",
+    "name": "1198 Heather Ln SE",
+    "address": "1198 Heather Ln SE, Salem, OR 97302",
+    "category": "whole-home",
+    "propertyType": "House",
+    "rent": "$2,375",
+    "bedsBaths": "3bd/1.5ba, 1,388 sqft",
+    "source": "Apartments.com",
+    "sourceUrl": "https://www.apartments.com/1198-heather-ln-se-salem-or/k2qmkn8/",
+    "images": [
+      "https://images1.apartments.com/i2/T8MFY_3ODN3MzotqFGEAb0PRBY6TX95Pv7X8-DeSQ5s/116/1198-heather-ln-se-salem-or-primary-photo.jpg",
+      "https://images1.apartments.com/i2/9jv7GiksBVeoiI-a8cueW64kTkMtPF4CpSevFJAkzMk/111/1198-heather-ln-se-salem-or-building-photo.jpg",
+      "https://images1.apartments.com/i2/LmVsk-9gRfB80QaWuWqO-OixnCz6hSNEBRB3Z-sDElI/111/1198-heather-ln-se-salem-or-building-photo.jpg",
+      "https://images1.apartments.com/i2/MginAZzvdmYAqiCqheUInU2kcszlsFThtolwBT-0UvY/111/1198-heather-ln-se-salem-or-building-photo.jpg"
+    ],
+    "petPolicy": "Confirmed: dogs + cats OK",
+    "confirmedAmenities": "Fenced yard, 2-car garage, W/D hookup",
+    "toVerify": "AC, dishwasher",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": 1,
+    "researchNotes": "Rejected — too shabby.",
+    "seedStatus": "rejected",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "madrona-ave-se-1420",
+    "name": "1420 Madrona Ave SE",
+    "address": "1420 Madrona Ave SE, Salem, OR 97302",
+    "category": "whole-home",
+    "propertyType": "House",
+    "rent": "$2,599",
+    "bedsBaths": "3bd/2ba, 1,711 sqft",
+    "source": "Apartments.com",
+    "sourceUrl": "https://www.apartments.com/1420-madrona-ave-se-salem-or/xz2rmnm/",
+    "images": [
+      "https://images1.apartments.com/i2/uuQmiLz5VHxAoHRt3nfHXRSuvJBuDAJWAjIiZ1phBmA/116/1420-madrona-ave-se-salem-or-primary-photo.jpg",
+      "https://images1.apartments.com/i2/cf8jPY0cYw0j4nCCveXDg0KTdBQA2VsqHREyc1WhERc/111/1420-madrona-ave-se-salem-or-building-photo.jpg",
+      "https://images1.apartments.com/i2/Vy7aju-KE3bWjIWgi65NHFylMAPkDz3QF7Te3McBCZk/111/1420-madrona-ave-se-salem-or-building-photo.jpg",
+      "https://images1.apartments.com/i2/2uXQD_K7DeNJi5AekMKSN3qtFO8RDPKGJjrTxTOSklQ/111/1420-madrona-ave-se-salem-or-building-photo.jpg"
+    ],
+    "petPolicy": "Unconfirmed",
+    "confirmedAmenities": "Massive fenced yard, attached garage + RV parking, updated interior, W/D hookup",
+    "toVerify": "AC, dishwasher, pet policy",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": 3,
+    "researchNotes": "Location is nice for Julia's job but that's it. Small bathrooms.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "wagtail-ct-1965",
+    "name": "1965 Wagtail Ct",
+    "address": "1965 Wagtail Ct, West Salem, OR",
+    "category": "whole-home",
+    "propertyType": "House",
+    "rent": "$2,495",
+    "bedsBaths": "3bd/2ba, 1,761 sqft",
+    "source": "ApartmentIQ",
+    "sourceUrl": "https://edge.apartmentiq.io/salem-or/1965-wagtail-ct",
+    "images": [],
+    "petPolicy": "1 small mature dog allowed, no mention of cats — likely a problem for 2 cats",
+    "confirmedAmenities": "Air conditioning, attached garage, dishwasher — verified live listing, available now. Managed by Premium Property Management.",
+    "toVerify": "Exact pet fee",
+    "contact": {
+      "company": "Premium Property Management",
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "This is West Salem (schools: Harritt Elem/Walker MS/West Salem HS), not just \"Salem\" — same longer-commute flag as other West Salem entries.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "argyle-dr-s-3324",
+    "name": "3324 Argyle Dr S",
+    "address": "3324 Argyle Dr S, Salem, OR 97302",
+    "category": "off-market",
+    "propertyType": "House",
+    "rent": "$2,495",
+    "bedsBaths": "3bd/2ba",
+    "source": "ApartmentList",
+    "sourceUrl": "https://www.apartmentlist.com/or/salem/3324-argyle-dr-s",
+    "images": [],
+    "petPolicy": "Unknown",
+    "confirmedAmenities": "",
+    "toVerify": "",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Off market — verified directly on the live listing page (zero 3bd units available). Do not pursue unless the property manager confirms new availability.",
+    "seedStatus": "rejected",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "crestview-dr-s-3994",
+    "name": "3994 Crestview Dr S",
+    "address": "3994 Crestview Dr S, Salem, OR 97302",
+    "category": "off-market",
+    "propertyType": "House",
+    "rent": "$2,500",
+    "bedsBaths": "3bd/2.5ba",
+    "source": "ApartmentList",
+    "sourceUrl": "https://www.apartmentlist.com/or/salem/3bd-2-5ba-single-story-home-for-viewing",
+    "images": [],
+    "petPolicy": "Unknown",
+    "confirmedAmenities": "",
+    "toVerify": "",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Off market — same as 3324 Argyle Dr S, zero 3bd units available. Do not pursue.",
+    "seedStatus": "rejected",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "gateway-village-madras-st-se-1900",
+    "name": "Gateway Village",
+    "address": "1900 Madras St SE, Salem, OR 97306",
+    "category": "apartment-complex",
+    "propertyType": "Apartment complex",
+    "rent": "$1,335–$1,995",
+    "bedsBaths": "1-3bd",
+    "source": "HotPads",
+    "sourceUrl": "https://hotpads.com/gateway-village-salem-or-97306-vf8ux1/pad",
+    "images": [
+      "https://photos.zillowstatic.com/fp/a3a8f5cfc6ae1263dc8fd95e63592ade-cc_ft_1152.jpg",
+      "https://photos.zillowstatic.com/fp/58d04b5626c7a8a95c447c276a485fc8-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/75390fd678675d6709a775c0b90a5900-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/41052b5d4c4a36a668d21be49397f586-cc_ft_1536.webp"
+    ],
+    "petPolicy": "Confirmed: 2 dogs + 2 cats explicitly allowed",
+    "confirmedAmenities": "In-unit laundry, parking, 24-hr maintenance",
+    "toVerify": "AC, outdoor space, exact 3bd availability",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Verified live listing. Real hotpads.com link, checked out with an even better pet policy than first recorded (correction on 9/22).",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "encore-reed-ln-se-5861",
+    "name": "Encore",
+    "address": "5861 Reed Ln SE, Salem, OR 97306",
+    "category": "apartment-complex",
+    "propertyType": "Apartment complex",
+    "rent": "$1,395–$1,995",
+    "bedsBaths": "1-3bd",
+    "source": "HotPads",
+    "sourceUrl": "https://hotpads.com/encore-salem-or-97306-249jsuz/pad",
+    "images": [
+      "https://photos.zillowstatic.com/fp/c0144eec36ae1767778b8e4b8db59d49-cc_ft_1152.jpg",
+      "https://photos.zillowstatic.com/fp/7c9a682a32f851ece3f2b2468922b330-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/8be10b937ec6411aa90002fd5c571e1c-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/5ee8315b7422d516f30924b60c1b57a7-cc_ft_1536.webp"
+    ],
+    "petPolicy": "Confirmed: 2 dogs + 2 cats explicitly allowed",
+    "confirmedAmenities": "In-unit laundry, A/C",
+    "toVerify": "Dishwasher, exact 3bd availability (sources conflict on whether one is currently open)",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Verified live listing. Real hotpads.com link (correction on 9/22).",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "julias-list-the-fairway",
+    "name": "The Fairway",
+    "address": "1691 Waln Dr SE, Salem, OR 97306",
+    "category": "julias-list",
+    "propertyType": "Apartment",
+    "rent": "3bd: $2,100",
+    "bedsBaths": "3bd",
+    "source": "HotPads",
+    "sourceUrl": "https://hotpads.com/the-fairway-salem-or-97306-241yfam/pad",
+    "images": [
+      "https://photos.zillowstatic.com/fp/fcb1566c10c165491233f90a63e22b0b-cc_ft_1152.jpg",
+      "https://photos.zillowstatic.com/fp/d1ab6bc21f797431871b97482595ce69-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/84754964fcd14d1a4a1f517f8a6d3abf-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/91fc7ac92b25b9be647fed1f6ddf5164-cc_ft_1536.webp"
+    ],
+    "petPolicy": "Pets welcome",
+    "confirmedAmenities": "A/C, in-unit W/D, dishwasher — all confirmed",
+    "toVerify": "Exact unit pricing/availability",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "South Salem. See also the confirming Zillow unit listing (fairway-waln-dr-se-1691-unit221).",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "julias-list-the-grove",
+    "name": "The Grove",
+    "address": "3955 Outward Rd SE, Salem, OR (near Morningside)",
+    "category": "julias-list",
+    "propertyType": "Apartment complex",
+    "rent": "$2802",
+    "bedsBaths": "3/2",
+    "source": "Rentable",
+    "sourceUrl": "https://www.rentable.co/salem-or/the-grove",
+    "images": [
+      "https://images.rentable.co/100023953/118487853/large.jpeg",
+      "https://images.rentable.co/100023953/118487859/large.jpeg",
+      "https://images.rentable.co/100023953/118487772/large.jpeg",
+      "https://images.rentable.co/100023953/118487861/large.jpeg"
+    ],
+    "petPolicy": "Pets allowed, limit 2 per unit — would need an exception for 2 cats + 1 dog",
+    "confirmedAmenities": "In-unit W/D, pool/gym/gated dog park",
+    "toVerify": "AC not explicitly listed",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": "Contacted 2026/09/26"
+    },
+    "score": null,
+    "researchNotes": "",
+    "seedStatus": "rejected",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "julias-list-magnolia98",
+    "name": "Magnolia98",
+    "address": "6609 Devon Ave SE, Salem, OR 97306",
+    "category": "julias-list",
+    "propertyType": "Apartment",
+    "rent": "2-3bd: $1,895–$2,395",
+    "bedsBaths": "2-3bd",
+    "source": "HotPads",
+    "sourceUrl": "https://hotpads.com/magnolia-98-salem-or-97306-24w8t99/pad",
+    "images": [
+      "https://photos.zillowstatic.com/fp/3c14434a23d4f9e273deacee7dfd4c85-cc_ft_1152.jpg",
+      "https://photos.zillowstatic.com/fp/d7ba431b3fc983dd96b9adad61ab6eda-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/18afaed10323753ee11488774ad2f083-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/a07f41fabac6e93906c11c26b4f65675-cc_ft_1536.webp"
+    ],
+    "petPolicy": "Cats + dogs allowed",
+    "confirmedAmenities": "In-unit laundry, dishwasher, parking",
+    "toVerify": "AC not explicitly listed for this location",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "julias-list-magnolia36",
+    "name": "Magnolia36",
+    "address": "3494 Maci Elle Ct SE, Salem, OR 97302",
+    "category": "julias-list",
+    "propertyType": "Apartment",
+    "rent": "2-3bd: $1,695–$2,350",
+    "bedsBaths": "2-3bd",
+    "source": "HotPads",
+    "sourceUrl": "https://hotpads.com/magnolia36-salem-or-97302-24a2563/pad",
+    "images": [
+      "https://photos.zillowstatic.com/fp/bbafe857749bee6128e8c751ebfcfa8e-cc_ft_1536.jpg",
+      "https://photos.zillowstatic.com/fp/d95edb82047f6869353ce45d9d94ff77-cc_ft_1536.webp",
+      "https://photos.zillowstatic.com/fp/e42154e41ef11e1b34abc6fb8d4ea7f5-cc_ft_1536.webp"
+    ],
+    "petPolicy": "Cats + dogs allowed",
+    "confirmedAmenities": "In-unit W/D, wall-mounted A/C, dishwasher, attached garage",
+    "toVerify": "",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Strongest amenity match of this batch. See also the confirming Zillow unit listing (magnolia36-maci-elle-ct-se-3494).",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "fairview-ave-se-845",
+    "name": "845 Fairview Ave SE",
+    "address": "845 Fairview Ave SE, Salem, OR 97302",
+    "category": "unverified",
+    "propertyType": "House",
+    "rent": "$2,395",
+    "bedsBaths": "3bd/2ba",
+    "source": "Redfin (aggregated)",
+    "sourceUrl": "",
+    "images": [],
+    "petPolicy": "Unknown",
+    "confirmedAmenities": "",
+    "toVerify": "Whether this is actually for rent — Will spotted it on Zillow as a for-sale listing, status unclear",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "No live listing page found; only in aggregated Redfin rental data. Confirm directly.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "kari-dawn-ave-se-1959",
+    "name": "1959 Kari Dawn Ave SE (South Salem Townhome)",
+    "address": "1959 Kari Dawn Ave SE, Salem, OR 97306",
+    "category": "unverified",
+    "propertyType": "Apartment",
+    "rent": "$2,095 (incl. $500 move-in special)",
+    "bedsBaths": "2bd + bonus room",
+    "source": "Aggregated",
+    "sourceUrl": "",
+    "images": [],
+    "petPolicy": "Unknown",
+    "confirmedAmenities": "",
+    "toVerify": "Everything — no live listing page found",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "No live listing page found; only in aggregated data.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "orchard-ridge-linwood-st-nw-1961",
+    "name": "Orchard Ridge",
+    "address": "1961 Linwood St NW, Salem, OR 97304",
+    "category": "unverified",
+    "propertyType": "Apartment complex",
+    "rent": "3bd: $1,999",
+    "bedsBaths": "3bd",
+    "source": "Aggregated",
+    "sourceUrl": "",
+    "images": [],
+    "petPolicy": "Unknown",
+    "confirmedAmenities": "",
+    "toVerify": "Everything — no dedicated listing page found",
+    "contact": {
+      "company": null,
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "West Salem, across the river — also flagged for longer commute.",
+    "seedStatus": "new",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  },
+  {
+    "id": "reserve-at-hawks-ridge-whitaker-dr-se-1569",
+    "name": "Reserve at Hawk's Ridge",
+    "address": "1569 Whitaker Dr SE, Salem, OR 97317",
+    "category": "disqualified",
+    "propertyType": "Apartment complex",
+    "rent": "1bd $1,299 / 2bd $1,399–$1,499 / 3bd $1,799",
+    "bedsBaths": "1-3bd, 1-2ba",
+    "source": "Official site",
+    "sourceUrl": "https://reserveathawksridge.com/",
+    "images": [
+      "https://reserveathawksridge.com/wp-content/uploads/2026/04/HawksRidge_hero_1.webp",
+      "https://reserveathawksridge.com/wp-content/uploads/2026/04/HawksRidge_hero_2.webp",
+      "https://reserveathawksridge.com/wp-content/uploads/2026/04/HawksRidge_hero_3.webp",
+      "https://reserveathawksridge.com/wp-content/uploads/2026/04/HawksRidge_hero_4.webp"
+    ],
+    "petPolicy": "Disqualifying: no cats, max 1 dog under 25 lbs, no exceptions (confirmed via official pricing sheet)",
+    "confirmedAmenities": "In-unit W/D, A/C, dishwasher, private patio, gated, pool, gym, large fenced dog park. Managed by Norris & Stevens.",
+    "toVerify": "",
+    "contact": {
+      "company": "Norris & Stevens",
+      "phone": null,
+      "email": null,
+      "notes": ""
+    },
+    "score": null,
+    "researchNotes": "Otherwise a strong match, but the no-cats policy is a hard dealbreaker given the family's 2 cats.",
+    "seedStatus": "rejected",
+    "notes": "",
+    "appointment": {
+      "dateTime": null
+    }
+  }
+]
