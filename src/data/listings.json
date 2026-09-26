@@ -227,7 +227,7 @@
   {
     "id": "manual-muiqhpoi-p2wr",
     "name": "South Block Apartments",
-    "address": "315 Commercial Street",
+    "address": "315 Commercial St SE, Salem, OR 97301",
     "category": "manual",
     "propertyType": "apartment",
     "rent": {
@@ -253,28 +253,28 @@
       "https://images1.apartments.com/i2/vNxb76H0mVhaD2pomfo4aaauslZtUCzZKvTgYgiBzdI/111/south-block-apartments-salem-or-building-photo.jpg?p=1"
     ],
     "pets": {
-      "cats": "unknown",
-      "dogs": "unknown",
-      "notes": "- unconfimed"
+      "cats": "allowed",
+      "dogs": "allowed",
+      "notes": "- Pet Deposit (refundable) - $300\n- Pet Rent - $35 / mo"
     },
     "amenities": {
       "laundry": "unknown",
-      "ac": "unknown",
+      "ac": "yes",
       "dishwasher": "unknown",
       "garage": "unknown",
       "outdoorSpace": "unknown"
     },
-    "confirmedAmenities": "",
+    "confirmedAmenities": "- Parking (Unreserved) - $75 / mo\n- 3 - 14 Month Leases / short term leases\n- 10 minute walk to Riverfront Park",
     "toVerify": "",
     "contact": {
       "company": null,
-      "phone": null,
+      "phone": "(971) 272-8161",
       "email": null,
       "notes": "- Emailed 2026/09/26"
     },
     "contacted": true,
-    "score": 4,
-    "researchNotes": "",
+    "score": 4.5,
+    "researchNotes": "- Very responsive office\n- 10 minute commute to OSG",
     "seedStatus": "accepted",
     "notes": "",
     "appointment": {
