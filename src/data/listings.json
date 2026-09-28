@@ -141,8 +141,8 @@
     ],
     "pets": {
       "cats": "allowed",
-      "dogs": "restricted",
-      "notes": "- Cats, small dogs okay"
+      "dogs": "allowed",
+      "notes": ""
     },
     "amenities": {
       "laundry": "unknown",
@@ -154,10 +154,10 @@
     "confirmedAmenities": "",
     "toVerify": "",
     "contact": {
-      "company": null,
-      "phone": null,
+      "company": "Jon Horter / 3H Management",
+      "phone": "503-873-3592",
       "email": null,
-      "notes": "- Contacted 2026/09/26"
+      "notes": "- Contacted 2026/09/26\n- Phone call 2026/09/28\n  - Left voicemail. Awaiting call back\n- Has availability on Sunday AM 2026/10/03"
     },
     "contacted": true,
     "score": 3.5,
@@ -666,7 +666,7 @@
       "email": null,
       "notes": ""
     },
-    "contacted": false,
+    "contacted": true,
     "score": null,
     "researchNotes": "",
     "seedStatus": "accepted",
@@ -816,29 +816,29 @@
       "https://photos.zillowstatic.com/fp/8fd59c96613f83b708d4d666af324974-cc_ft_1536.webp"
     ],
     "pets": {
-      "cats": "unknown",
-      "dogs": "unknown",
-      "notes": "Unconfirmed — sibling property to Magnolia36/98, likely similar policy"
+      "cats": "allowed",
+      "dogs": "allowed",
+      "notes": ""
     },
     "amenities": {
       "laundry": "unknown",
       "ac": "unknown",
       "dishwasher": "unknown",
-      "garage": "unknown",
+      "garage": "yes",
       "outdoorSpace": "unknown"
     },
-    "confirmedAmenities": "",
-    "toVerify": "Pet policy, AC, dishwasher",
+    "confirmedAmenities": "- Private single-car garage",
+    "toVerify": "",
     "contact": {
-      "company": null,
-      "phone": null,
-      "email": null,
-      "notes": ""
+      "company": "Maci Lapray",
+      "phone": "(503) 991-9635",
+      "email": "maci@magnolia100.com",
+      "notes": "- Emailed 2026/09/28\n  - Awaiting response"
     },
-    "contacted": false,
+    "contacted": true,
     "score": null,
     "researchNotes": "New sibling property to Magnolia36/98.",
-    "seedStatus": "rejected",
+    "seedStatus": "accepted",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -1055,9 +1055,9 @@
     "confirmedAmenities": "",
     "toVerify": "Pet policy, AC, dishwasher",
     "contact": {
-      "company": null,
-      "phone": null,
-      "email": null,
+      "company": "Annie Anderson",
+      "phone": "(503) 540-7777",
+      "email": "aandersen@livecloudten.com",
       "notes": ""
     },
     "contacted": true,
