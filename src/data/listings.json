@@ -165,7 +165,7 @@
     "seedStatus": "accepted",
     "notes": "",
     "appointment": {
-      "dateTime": null
+      "dateTime": "2026-10-03T09:00"
     }
   },
   {
@@ -495,7 +495,7 @@
       "company": null,
       "phone": null,
       "email": null,
-      "notes": "- Contacted 2026/09/26"
+      "notes": "- Contacted 2026/09/26\n- This is a placeholder. Have not confirmed actual appointment time yet."
     },
     "contacted": true,
     "score": null,
@@ -503,7 +503,7 @@
     "seedStatus": "accepted",
     "notes": "",
     "appointment": {
-      "dateTime": "2026-10-03T09:00"
+      "dateTime": "2026-10-03T23:15"
     }
   },
   {
