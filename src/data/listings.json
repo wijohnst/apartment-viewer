@@ -500,7 +500,7 @@
     "contacted": true,
     "score": null,
     "researchNotes": "",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": "2026-10-03T23:15"
@@ -818,7 +818,7 @@
     "pets": {
       "cats": "allowed",
       "dogs": "allowed",
-      "notes": ""
+      "notes": "Additional Security Deposit of $750.00 and a total Monthly Pets Rent of $75.00."
     },
     "amenities": {
       "laundry": "unknown",
@@ -841,7 +841,7 @@
     "seedStatus": "accepted",
     "notes": "",
     "appointment": {
-      "dateTime": null
+      "dateTime": "2026-10-02T13:00"
     }
   },
   {
