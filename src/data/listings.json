@@ -49,7 +49,7 @@
     "contacted": true,
     "score": 3,
     "researchNotes": "- 45 min. appointment",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": "2026-10-02T10:45"
@@ -105,7 +105,7 @@
     "contacted": true,
     "score": null,
     "researchNotes": "",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": "2026-10-03T10:30"
@@ -162,7 +162,7 @@
     "contacted": true,
     "score": 3.5,
     "researchNotes": "- Good backyard\n- Detached garage",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": "2026-10-03T09:00"
@@ -218,7 +218,7 @@
     "contacted": true,
     "score": 3,
     "researchNotes": "",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -275,7 +275,7 @@
     "contacted": true,
     "score": 4.5,
     "researchNotes": "- Very responsive office\n- 10 minute commute to OSG",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": "2026-10-02T09:30"
@@ -669,7 +669,7 @@
     "contacted": true,
     "score": null,
     "researchNotes": "",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -781,7 +781,7 @@
     "contacted": true,
     "score": null,
     "researchNotes": "Confirms the existing Magnolia36 entry from Julia's list — strongest amenity match of that batch. See also julias-list-magnolia36.",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
@@ -838,7 +838,7 @@
     "contacted": true,
     "score": null,
     "researchNotes": "New sibling property to Magnolia36/98.",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": "2026-10-02T13:00"
@@ -1006,7 +1006,7 @@
     "contacted": true,
     "score": null,
     "researchNotes": "Confirms this is a real, active listing — moved out of Unverified. West Salem, same commute flag as other West Salem entries.\n\nLarge closets",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": "2026-10-02T14:00"
@@ -1063,7 +1063,7 @@
     "contacted": true,
     "score": null,
     "researchNotes": "Confirms The Meridian is genuinely leasing residential units — moved out of Unverified. Near downtown, ~2 mi from Julia's office.",
-    "seedStatus": "accepted",
+    "seedStatus": "rejected",
     "notes": "",
     "appointment": {
       "dateTime": null
